@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2? family= Comforter+Brush & display=swap');
+html{
+    /*Общее для сайта*/
+    --fon: url(img/fon.jpg);     
+    --background-color: rgba(255,255,255,0.5);
+    --border: 2px solid rgba(128, 128, 128, 0.5);
+    --margin:2%;
+    --font-family: 'Comforter Brush', cursive;
+    --font-size: 50px;
+
+    /*Параметры страницы*/
+    --width-page: 2340px;
+    --height-page: 1200px;
+    --padding-page: 5%;
+
+    /*Все ниги*/
+    --width-form: 100%;/*как лучше назначть отдельно или базвые 100%, 50%,10% вынести? */
+    --height-form: 70%;
+
+    /*Книга*/
+    --width-book: 20%;
+    --height-book: 100%;
+    --margin-book: 3%;
+    --padding-book: 1%;
+    --border-radius-book:5%;
+    --font-size-book: 30px;
+        /*Кнопки*/
+    --width-buttons-hange-deleteBook: 100%;
+    --height-buttons-hange-deleteBook: 10%;        
+             /*Удалить*/
+    --width-button-hange-deleteBook: 50%;
+    --height-button-hange-deleteBook: 100%;             
+
+    /*Добавление книги*/
+          /*Кнопка*/
+    --width-button-addBook: 10%;
+    --height-button-addBook: 6%;
+    --border-radius-addBook: 5%;
+
+        /*Модальное окно*/
+        --width-modal: 20%;
+        --height-modal: 30%;
+        --min-width-modal: 250px;
+        --min-height-modal: 350px;
+        --fonModal: url(img/fonModal.JPG); 
+}
+
+button{
+    border: 0;
+    padding: 0;
+    background-color: rgba(255,255,255,0);/*Мне кажется это костыль*/
+    font-size: 30px;
+    font-family: var(--font-family);
+    font-weight:600;
+    box-sizing: border-box; 
+}
+
+
+.page{ 
+    display: flex;
+    flex-direction: column;
+    max-width: var(--width-page);
+    height: var(--height-page);
+    padding: var(--padding-page);
+    background-image: var(--fon);   
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+} 
+
+.addBook{
+    display: flex;
+    justify-content: center;
+    width: var(--width-button-addBook);
+    height: var(--height-button-addBook);
+    box-sizing: border-box;
+    max-height: 100px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-addBook);
+    border: var(--border);
+    margin: var(--margin);
+}
+    .addBookBtn{
+    color: green;
+    }
+
+    .addBookModal{
+    display: none;
+    position: fixed; 
+    flex-direction: column; 
+    height: 700px;
+    width: 1000px;
+    background-image: var(--fonModal);
+    background-size:cover;
+    margin-left: 75%;
+    border: var(--border);
+    border-radius: var(--border-radius-addBook);
+    }
+        .modalHeader{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        .modalForm{
+            display: flex;
+            width: 50%;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 3%;
+            margin-left: 23%;
+        }
+
+
+
+.books{
+    display: flex;
+    width: var(--width-form);
+    height: var(--height-form);
+    box-sizing: border-box;
+    flex-flow: row wrap;
+
+}
+    .book{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--background-color);
+    width: 40%;
+    height: 70%;
+    max-width: var(--width-book);
+    max-height: var(--height-book);
+    margin-right: var(--margin-book);
+    padding-top: var(--padding-book);
+    font-size: var(--font-size-book);
+    align-items: center;
+    justify-content:space-between;
+    border-radius: var(--border-radius-book);
+    box-sizing: border-box;
+    margin-left: var(--margin);
+    margin-top: var(--margin);
+    }
+        .imgBook{
+    object-fit:fill;
+    width: 60%;
+        }
+        .buttonsBook{
+    display: flex;
+    justify-content: space-between;
+    width: var(--width-buttons-hange-deleteBook);
+    height: var(--height-buttons-hange-deleteBook);
+    box-sizing: border-box;
+        }
+        .hange-deleteBook{
+    display: flex;
+    justify-content: center;
+    border: var(--border);
+    height: var(--height-button-hange-deleteBook);
+    width: var(--width-button-hange-deleteBook);
+    box-sizing: border-box;
+        }
+        .deleteBook{
+    color: red;
+        }

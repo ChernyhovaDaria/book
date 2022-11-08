@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+  		<title>Книжная полка</title>
+          <link rel="stylesheet" type="text/css" href="styles.css">
+          <link rel="stylesheet" type="text/css" href="reset.css">
+        
+	</head>
+
+	<body>
+        <div class="page">
+                <div class="header">
+                    <h1 class="headerPage">
+                        Книжная полка
+                    </h1>
+                </div>
+
+                <div class="addBook">
+                    <button class="addBookBtn" id="addBook" onclick="openModal()">Добавить</button>
+                    
+                    <div class="addBookModal" id="addBookModal">
+                        <div class="modalHeader">
+                            <h2>Добавление книги!</h2>
+                            <button class="endModal">Закрыть</button>
+              
+                        </div>
+                        <div class="modalForm">
+                            <p>Название:</p>
+                            <input id="modalTaitl"/>
+                            <p>Автор:</p>
+                            <input name="" id="modalAuthors"/>
+                            <p>Год выпуска:</p>
+                            <input id="modalYear"/>
+                            <p>Изoбражение:</p>
+                            <input id="modalImg"/>
+                        </div>
+                        <button id="addBookModal" onclick="addBook()">Добавить</button>
+                    </div>
+                </div>
+
+
+
+                <div class="books" id="bookBooks">
+                </div>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
